@@ -1,0 +1,26 @@
+.input-field {
+    display: grid;
+
+    label {
+        text-align: center;
+        text-transform: uppercase;
+    
+        color: var(--white);
+      }
+    
+      input {
+        width: 30rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+        padding: 0 0.5rem;
+        border: 1px solid rgba(230, 226, 226, 0.313);
+    
+        background-color: transparent;
+        color: var(--white);
+        font-size: 1rem;
+      }
+    
+      input:hover {
+        background-color: var(--black);
+      }
+}
