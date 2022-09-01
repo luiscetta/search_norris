@@ -5,7 +5,7 @@ import './styles.scss';
 
 const SearchInput = ({ value, onChange }) => {
     function handleChange(event) {
-        onChange(event.target, value);
+        onChange(event.target.value);
     }
 
     return (
@@ -14,6 +14,7 @@ const SearchInput = ({ value, onChange }) => {
             <input
                 type="search"
                 autoFocus
+                value={value}
                 onChange={handleChange}
             />
         </div>
