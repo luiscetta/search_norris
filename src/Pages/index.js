@@ -21,7 +21,7 @@ export default function Homepage() {
 
     const doSearch = async (search) => {
         setSearchText(search);
-        const result = await axios.get('https://api.chucknorris.io/jokes/random', { search }).data;
+        const result = await axios.get(`https://api.chucknorris.io/jokes/search?query=${search}`);
         console.log(result);
         setSearchresults({
             joke: result.data.value,
