@@ -1,0 +1,36 @@
+.results-container {
+    margin: 5rem auto 0;
+    width: 100%;
+    color: var(--white);
+
+    h2 {
+        margin: auto;
+        width: 70%;
+        font-weight: bold;
+        letter-spacing: .15rem;
+    }
+
+    .results-content {
+        margin: 0 auto;
+        width: 75%;
+        padding: .1rem 0;
+        border-radius: 0.8rem;
+
+        .results-item {
+            display: grid;  
+            text-align: center;
+
+            li {
+                width: 100%;
+                margin: auto;
+                list-style: none;
+                padding: 2rem 0;
+                line-height: 2rem;
+                border-radius: .5rem;
+
+                background-color: var(--black);
+               
+            }
+        }
+    }
+}

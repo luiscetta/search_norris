@@ -3,7 +3,7 @@ import React from 'react';
 import './styles.scss';
 
 
-const SearchInput = ({ value, onChange }) => {
+export default function SearchInput({ value, onChange }) {
     function handleChange(event) {
         onChange(event.target.value);
     }
@@ -16,9 +16,9 @@ const SearchInput = ({ value, onChange }) => {
                 autoFocus
                 value={value}
                 onChange={handleChange}
+                minLength={1}
             />
         </div>
     );
 };
 
-export default SearchInput;
