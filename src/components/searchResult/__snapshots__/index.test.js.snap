@@ -9,6 +9,10 @@ exports[`Search Results component When the component is rendered Should match sn
   </h2>
   <div
     className="results-content"
-  />
+  >
+    <p>
+      No results found!
+    </p>
+  </div>
 </div>
 `;

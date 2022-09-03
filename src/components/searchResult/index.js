@@ -8,13 +8,19 @@ export default function SearchResults({ results }) {
             <div className="results-container">
                 <h2>Search results:</h2>
                 <div className='results-content'>
-                    {results?.map((item) => {
-                        return (
-                            <div className="results-item" key={item.id}>
-                                <p>{item.value}</p>
-                            </div>
-                        );
-                    })}
+                    {
+                        results.length
+                            ?
+                            results?.map((item) => {
+                                return (
+                                    <div className="results-item" key={item.id}>
+                                        <p>{item.value}</p>
+                                    </div>
+                                );
+                            })
+                            :
+                            <p>No results found!</p>
+                    }
                 </div>
             </div>
         </>

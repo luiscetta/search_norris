@@ -8,27 +8,25 @@ import Loading from '../../components/Loader';
 import chuckNorris from '../../components/assets/chuck.png'
 import SearchInput from '../../components/searchInput';
 import SearchResults from '../../components/searchResult';
+import { ErrorToast } from '../../utils/Toaster';
 
 import './styles.scss';
 
+
 export default function Homepage() {
     const [searchText, setSearchText] = useState('');
-    const [searchResults, setSearchResults] = useState([]);
+    const [searchResults, setSearchResults] = useState(null);
     const [loading, setLoading] = useState(false);
-    const [showResults, setShowResults] = useState(false);
 
-    useEffect(() => {
-        if (searchResults.length) setShowResults(true);
-    }, [searchResults.length]);
-
-    const doSearch = async () => {
-
+    async function doSearch() {
         try {
             setLoading(true);
             const { data } = await axios.get(`https://api.chucknorris.io/jokes/search?query=${searchText}`)
             setSearchResults(data.result);
         } catch (err) {
-            alert('Type a word, please!');
+            if (err.response.status === 400) {
+                ErrorToast('Your search must have at least 3 characters, please!');
+            }
         } finally {
             setLoading(false);
         }
@@ -56,10 +54,13 @@ export default function Homepage() {
                     {
                         loading
                             ? <Loading />
-                            : (showResults && <SearchResults results={searchResults} />)
+                            : (searchResults && <SearchResults id="results" results={searchResults} />)
                     }
                 </div>
             </div>
         </>
     );
 }
+
+
+
