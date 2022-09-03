@@ -8,11 +8,11 @@ export default function SearchResults({ results }) {
             <div className="results-container">
                 <h2>Search results:</h2>
                 <div className='results-content'>
-                    {results.map((result) => {
+                    {results?.map((item) => {
                         return (
-                            <ul className="results-item" key={result.id}>
-                                <li>{result.value}</li>
-                            </ul>
+                            <div className="results-item" key={item.id}>
+                                <p>{item.value}</p>
+                            </div>
                         );
                     })}
                 </div>

@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search Results component When the component is rendered Should match snapshot 1`] = `
+<div
+  className="results-container"
+>
+  <h2>
+    Search results:
+  </h2>
+  <div
+    className="results-content"
+  />
+</div>
+`;

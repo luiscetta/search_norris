@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchInput component When the component is rendered Should match snapshot 1`] = `
+<div
+  className="input-field"
+>
+  <label
+    htmlFor="input"
+  >
+    Search for a word
+  </label>
+  <input
+    autoFocus={true}
+    className="search-input"
+    onChange={[Function]}
+    type="search"
+  />
+</div>
+`;

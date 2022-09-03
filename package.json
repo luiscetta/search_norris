@@ -3,15 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
-    "@testing-library/react": "^13.3.0",
-    "@testing-library/user-event": "^13.5.0",
     "axios": "^0.27.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-icons": "^4.4.0",
     "react-loader-spinner": "^5.3.3",
+    "react-lottie": "^1.2.3",
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "sass": "^1.54.8",
@@ -20,7 +18,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "jest --detectOpenHandles",
+    "test:coverage": "npm run test -- --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -40,5 +39,45 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.3.0",
+    "@testing-library/user-event": "^14.4.3",
+    "coverage": "^0.4.1",
+    "jsdom": "^20.0.0",
+    "react-test-renderer": "^18.2.0"
+  },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/src/setupTests.js"
+    ],
+    "coverageReporters": [
+      "json",
+      "text",
+      "lcov"
+    ],
+    "roots": [
+      "src/Pages/",
+      "src/components/"
+    ],
+    "collectCoverageFrom": [
+      "src/components/**/*",
+      "src/Pages/**/*",
+      "src/**/*.test.js",
+      "!src/**/*.snap"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "lines": 20,
+        "statements": 20
+      }
+    },
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/src/__mocks__/styleMock.js",
+      "\\.(gif|ttf|eot)$": "<rootDir>/src/__mocks__/fileMock.js",
+      "\\.svg$": "<rootDir>/src/__mocks__/svgMock.js",
+      "\\.png$": "<rootDir>/src/__mocks__/pngMock.js"
+    }
   }
 }

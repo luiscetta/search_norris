@@ -5,31 +5,55 @@
 
     h2 {
         margin: auto;
-        width: 70%;
+        font-size: 1.7rem;
+        width: 74%;
         font-weight: bold;
-        letter-spacing: .15rem;
+        letter-spacing: 0.15rem;
     }
 
     .results-content {
         margin: 0 auto;
         width: 75%;
-        padding: .1rem 0;
+        padding: 0.1rem 0;
         border-radius: 0.8rem;
 
         .results-item {
-            display: grid;  
+            width: 100%;
+            display: grid;
             text-align: center;
+            background-color: var(--black);
+            margin: 1.5rem auto 1rem;
+            border-radius: 0.3rem;
 
-            li {
-                width: 100%;
+            p {
                 margin: auto;
-                list-style: none;
                 padding: 2rem 0;
-                line-height: 2rem;
-                border-radius: .5rem;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
 
-                background-color: var(--black);
-               
+// MEDIA ________________________________________________________________________
+@media screen and (max-width: 480px) {
+    .results-container {
+        width: 100%;
+
+        h2 {
+            width: 100%;
+            text-align: center;
+        }
+        .results-content {
+            margin: auto;
+            width: 90%;
+
+            .results-item {
+                padding: 0;
+                width: 100%;
+
+                p {
+                    width: 20rem;
+                }
             }
         }
     }

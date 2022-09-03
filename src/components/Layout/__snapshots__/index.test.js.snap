@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout component When the component is rendered Should match snapshot 1`] = `
+<div>
+  <div>
+    <div />
+  </div>
+</div>
+`;

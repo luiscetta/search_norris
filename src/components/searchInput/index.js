@@ -12,11 +12,11 @@ export default function SearchInput({ value, onChange }) {
         <div className="input-field">
             <label htmlFor='input'>Search for a word</label>
             <input
+                className='search-input'
                 type="search"
                 autoFocus
                 value={value}
                 onChange={handleChange}
-                minLength={1}
             />
         </div>
     );
