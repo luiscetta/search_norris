@@ -26,11 +26,14 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm test:coverage`
 
-To run [Cypress](https://docs.cypress.io/guides/getting-started/opening-the-app#What-you-ll-learn) in the project.\
+This is so that when the test is run, the dev has more detailed coverage of the test performed. It shows if the test covered everything he should test.
 
 ### `npm run cypress:open`
 
-This is so that when the test is run, the dev has more detailed coverage of the test performed. It shows if the test covered everything he should test.
+To run [Cypress](https://docs.cypress.io/guides/getting-started/opening-the-app#What-you-ll-learn) in the project.\
+This command opens the Cypress panel to run end-to-end tests.
+
+If you prefer to run in the terminal from the project directory, just run `npx cypress run`.
 
 ### `npm run build`
 
@@ -75,3 +78,5 @@ I chose to make this application in React JS because it is a library that I have
 [Jest](https://jestjs.io/docs/getting-started) - created to test the React framework, also created by Facebook. But its implementation has become much broader, being used as a unit testing tool for several JavaScript platforms like Node and Redux, and even TypeScript platforms like Angular and Ionic.
 
 [React Test Renderer](https://reactjs.org/docs/test-renderer.html) - This package provides a React renderer that can be used to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment. Essentially, this package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a React DOM or React Native component without using a browser or jsdom.
+
+[Cypress](https://docs.cypress.io/guides/overview/why-cypress) - Cypress is a next generation front end testing tool built for the modern web. We address the key pain points developers and QA engineers face when testing modern applications.
