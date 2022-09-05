@@ -26,6 +26,10 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ### `npm test:coverage`
 
+To run [Cypress](https://docs.cypress.io/guides/getting-started/opening-the-app#What-you-ll-learn) in the project.\
+
+### `npm run cypress:open`
+
 This is so that when the test is run, the dev has more detailed coverage of the test performed. It shows if the test covered everything he should test.
 
 ### `npm run build`
