@@ -3,6 +3,8 @@
 This application fetches Chuck Norris jokes from an external API.\
 You can search for jokes related to a word or text entered in the search field.
 
+Test the application by clicking here: [Search Norris App](https://search-norris.vercel.app/).
+
 ## **How do I run the project?**
 
 In the project directory, you can run:
