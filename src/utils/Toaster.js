@@ -2,17 +2,18 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 
 
-const defaultOptions = {
+toast.configure({
     style: {
+        width: '40rem',
         fontWeight: 'bold',
-        fontSize: '1.4rem',
+        fontSize: '1.3rem',
     },
     position: toast.POSITION.TOP_CENTER,
-}
-
+    theme: 'colored',
+});
 
 export function ErrorToast(content) {
-    return toast.error(content, { ...defaultOptions });
+    return toast.error(content);
 }
 
 

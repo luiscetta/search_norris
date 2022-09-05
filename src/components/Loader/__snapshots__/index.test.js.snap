@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Loader component When the component is rendered Should loader is rendered correctly 1`] = `
+exports[`Loader component When the component is rendered Should match snapshot 1`] = `
 <div
   className="loader"
 >

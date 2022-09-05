@@ -7,7 +7,7 @@ import Loader from './';
 
 describe('Loader component', () => {
     describe('When the component is rendered', () => {
-        it('Should loader is rendered correctly', () => {
+        it('Should match snapshot', () => {
             const wrapper = create(<Loader />);
             expect(wrapper.toJSON()).toMatchSnapshot();
         });

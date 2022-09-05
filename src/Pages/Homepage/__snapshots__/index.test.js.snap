@@ -20,7 +20,11 @@ exports[`Home page test When the page is rendered Should match snapshot 1`] = `
     <h1>
       Search Norris
     </h1>
-    <div />
+    <input
+      className="search-input"
+      onChange={[Function]}
+      value=""
+    />
     <div
       className="btn-content"
     >
@@ -51,6 +55,7 @@ exports[`Home page test When the page is rendered Should match snapshot 1`] = `
       </button>
       <button
         className="btn-lucky"
+        onClick={[Function]}
       >
         I'm feeling lucky!
       </button>

@@ -7,12 +7,11 @@ exports[`SearchInput component When the component is rendered Should match snaps
   <label
     htmlFor="input"
   >
-    Search for a word
+    Search for a word (or text)
   </label>
   <input
     autoFocus={true}
     className="search-input"
-    onChange={[Function]}
     type="search"
   />
 </div>

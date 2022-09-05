@@ -1,7 +1,7 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
 
 import Loading from '../../components/Loader';
@@ -17,21 +17,44 @@ export default function Homepage() {
     const [searchText, setSearchText] = useState('');
     const [searchResults, setSearchResults] = useState(null);
     const [loading, setLoading] = useState(false);
+    const [feelingLucky, setFeelingLucky] = useState(false);
+
 
     async function doSearch() {
         try {
+            setFeelingLucky(false);
             setLoading(true);
             const { data } = await axios.get(`https://api.chucknorris.io/jokes/search?query=${searchText}`)
+            // console.log(data);
             setSearchResults(data.result);
         } catch (err) {
-            if (err.response.status === 400) {
+            if (err?.response?.status === 400) {
                 ErrorToast('Your search must have at least 3 characters, please!');
+            } else {
+                ErrorToast('Unexpected error');
             }
         } finally {
             setLoading(false);
         }
     };
 
+    async function doFeelingLucky() {
+        try {
+            setFeelingLucky(true);
+            setLoading(true);
+            const { data } = await axios.get('https://api.chucknorris.io/jokes/random');
+            // console.log(data);
+            setSearchResults([data]);
+        } catch (err) {
+            ErrorToast('Unexpected error');
+        } finally {
+            setLoading(false);
+        }
+    }
+
+    function handleChange(event) {
+        setSearchText(event.target.value);
+    }
 
     return (
         <>
@@ -42,19 +65,19 @@ export default function Homepage() {
                     <h1>Search Norris</h1>
                     <SearchInput
                         value={searchText}
-                        onChange={(search) => setSearchText(search)}
+                        onChange={handleChange}
                     />
                     <div className="btn-content">
                         <button onClick={doSearch} className='btn-search'>
                             <FaSearch className="search-icon" />
                             Search
                         </button>
-                        <button className='btn-lucky'>I'm feeling lucky!</button>
+                        <button onClick={doFeelingLucky} className='btn-lucky'>I'm feeling lucky!</button>
                     </div>
                     {
                         loading
                             ? <Loading />
-                            : (searchResults && <SearchResults id="results" results={searchResults} />)
+                            : (searchResults && <SearchResults id="results" results={searchResults} feelingLucky={feelingLucky} />)
                     }
                 </div>
             </div>
