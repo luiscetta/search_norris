@@ -19,21 +19,20 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.
 You may also see any lint errors in the console.
 
-### `npm test`
+### `npm run test`
 
 Launches the test runner in the interactive watch mode.
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm test:coverage`
+### `npm run test:coverage`
 
 This is so that when the test is run, the dev has more detailed coverage of the test performed. It shows if the test covered everything he should test.
 
-### `npm run cypress:open`
+### `npm run tests:e2e`
 
-To run [Cypress](https://docs.cypress.io/guides/getting-started/opening-the-app#What-you-ll-learn) in the project.\
-This command opens the Cypress panel to run end-to-end tests.
+This command runs end-to-end tests.
 
-If you prefer to run in the terminal from the project directory, just run `npx cypress run`.
+**Note: To run the tests, you need to run the project**.
 
 ### `npm run build`
 
