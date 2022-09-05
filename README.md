@@ -67,3 +67,7 @@ I chose to make this application in React JS because it is a library that I have
 [React Spinner Loader](https://openbase.com/js/react-loader-spinner/documentation) - provides simple React SVG spinner component which can be implemented for async await operation before data loads to the view.
 
 [React Toasty](https://fkhadra.github.io/react-toastify/migration-v8/) - allows you to add notifications to your app with ease (*version 8.0.3.*).
+
+[Jest](https://jestjs.io/docs/getting-started) - created to test the React framework, also created by Facebook. But its implementation has become much broader, being used as a unit testing tool for several JavaScript platforms like Node and Redux, and even TypeScript platforms like Angular and Ionic.
+
+[React Test Renderer](https://reactjs.org/docs/test-renderer.html) - This package provides a React renderer that can be used to render React components to pure JavaScript objects, without depending on the DOM or a native mobile environment. Essentially, this package makes it easy to grab a snapshot of the platform view hierarchy (similar to a DOM tree) rendered by a React DOM or React Native component without using a browser or jsdom.
