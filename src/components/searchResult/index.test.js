@@ -6,7 +6,8 @@ import SearchResults from './';
 
 
 function MockedComponent({ autoplay, animationData, loop, style }) {
-    return <div
+    // eslint-disable-next-line jsx-a11y/alt-text
+    return <img
         autoplay={autoplay}
         loop={loop}
         animationData={animationData}
