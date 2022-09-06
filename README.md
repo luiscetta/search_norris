@@ -34,8 +34,6 @@ This is so that when the test is run, the dev has more detailed coverage of the 
 
 This command runs end-to-end tests.
 
-**Note: To run the tests, you need to run the project**.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.
