@@ -56,7 +56,7 @@ You don't have to ever use `eject`. The curated feature set is suitable for smal
 
 ## **API**
 
-I used the API [chucknorris.io](https://api.chucknorris.io/) to get the jokes. These are "facts" (jokes) about the actor Chuck Norris.
+I used the API [chucknorris.io](https://api.chucknorris.io/) to get the jokes. These are "facts" about the actor Chuck Norris.
 
 ## **Some of the technologies used**
 
