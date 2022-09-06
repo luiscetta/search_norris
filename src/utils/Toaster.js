@@ -4,7 +4,6 @@ import 'react-toastify/dist/ReactToastify.min.css';
 
 toast.configure({
     style: {
-        width: '40rem',
         fontWeight: 'bold',
         fontSize: '1.3rem',
     },
@@ -14,6 +13,4 @@ toast.configure({
 
 export function ErrorToast(content) {
     return toast.error(content);
-}
-
-
+};

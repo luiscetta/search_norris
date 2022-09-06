@@ -16,7 +16,7 @@ export default function SearchResults({ results, feelingLucky }) {
                     {
                         results.length
                             ?
-                            results?.map((item) => {
+                            results.map((item) => {
                                 return (
                                     <div className={feelingLucky ? 'lucky-item' : 'results-item'} key={item.id}>
                                         {

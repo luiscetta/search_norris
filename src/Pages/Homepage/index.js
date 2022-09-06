@@ -1,4 +1,3 @@
-/* eslint-disable react-hooks/exhaustive-deps */
 import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import React, { useState } from 'react';
@@ -25,7 +24,6 @@ export default function Homepage() {
             setFeelingLucky(false);
             setLoading(true);
             const { data } = await axios.get(`https://api.chucknorris.io/jokes/search?query=${searchText}`)
-            // console.log(data);
             setSearchResults(data.result);
         } catch (err) {
             if (err?.response?.status === 400) {
@@ -43,7 +41,6 @@ export default function Homepage() {
             setFeelingLucky(true);
             setLoading(true);
             const { data } = await axios.get('https://api.chucknorris.io/jokes/random');
-            // console.log(data);
             setSearchResults([data]);
         } catch (err) {
             ErrorToast('Unexpected error');
