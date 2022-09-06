@@ -3,6 +3,7 @@ import axios from 'axios';
 import { Helmet } from 'react-helmet';
 import React, { useState } from 'react';
 import { FaSearch } from 'react-icons/fa';
+import { GiClover } from 'react-icons/gi';
 
 import Loading from '../../components/Loader';
 import chuckNorris from '../../components/assets/chuck.png'
@@ -18,7 +19,6 @@ export default function Homepage() {
     const [searchResults, setSearchResults] = useState(null);
     const [loading, setLoading] = useState(false);
     const [feelingLucky, setFeelingLucky] = useState(false);
-
 
     async function doSearch() {
         try {
@@ -72,7 +72,10 @@ export default function Homepage() {
                             <FaSearch className="search-icon" />
                             Search
                         </button>
-                        <button onClick={doFeelingLucky} className='btn-lucky'>I'm feeling lucky!</button>
+                        <button onClick={doFeelingLucky} className='btn-lucky'>
+                            <GiClover className="lucky-icon" />
+                            I'm feeling lucky!
+                        </button>
                     </div>
                     {
                         loading
